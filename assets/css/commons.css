@@ -1,0 +1,84 @@
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover{
+    color: inherit;
+    text-decoration: none;
+}
+
+.mt-120 {
+    margin-top: 120px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mt-80 {
+    margin-top: 80px;
+}
+
+.common-padding {
+    padding: 120px;
+}
+img {
+    width: 100%;
+}
+
+
+/* commons */
+/*  Shine(유리광)효과  */
+.fx-shine {
+  position: relative;       
+  overflow: hidden;         
+  border-radius: inherit;  
+  transition: transform .3s ease;
+}
+
+.fx-shine:hover {
+  transform: translateY(-2px) scale(1.01);
+}
+
+.fx-shine::after {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -30%;
+  width: 28%;
+  height: 220%;
+  border-radius: 32px;
+  background: linear-gradient(60deg, transparent 42%, rgba(255,255,255,.6), transparent 58%);
+  transform: translateX(-120%) rotate(25deg);
+  pointer-events: none;
+}
+
+.fx-shine:hover::after { animation: shine .9s ease-out; }
+
+@keyframes shine {
+  to { transform: translateX(380%) rotate(25deg); }
+}
+
+/* 이미지 zoom */
+.img-zoom{ 
+    display:inline-block; 
+    overflow:hidden; 
+    border-radius:12px; 
+}
+.img-zoom > img{
+  display:block; 
+  width:100%; 
+  height:100%; 
+  object-fit:cover;
+  transform:scale(1); 
+  transition:transform .6s ease;
+}
+.img-zoom:hover > img{ 
+    transform:scale(1.1); 
+}
+
+

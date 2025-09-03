@@ -1,0 +1,173 @@
+@import url('commons.css');
+
+.kv .kv--title {
+    height: 790px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.kv .kv--background {
+    background-image: url(../images/kv--backgroundimg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.kv--title__cta {
+    padding: 10px 15px;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: all .3s ease;
+    will-change: background-color;
+}
+
+.kv--title__cta:hover {
+    background-color: rgba(255, 255, 255, 1);
+
+}
+
+.kvSwiper{ 
+    position:relative; 
+}
+
+.kvSwiper .swiper-pagination{
+  position:absolute; 
+  left:0; 
+  right:0; 
+  bottom:24px;
+  display:flex; 
+  justify-content:center; 
+  gap:10px;
+}
+
+.kvSwiper .swiper-pagination-bullet{
+  width:30px; height:3px;           
+  border-radius:9999px;
+  background:#fff;                
+  opacity:0.3; 
+  margin:0 !important;
+}
+
+.kvSwiper .swiper-pagination-bullet-active{
+  background:#fff;  
+  opacity:1; 
+}
+
+/* content start */
+.content--title h3{
+  margin-bottom: 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content--title .line::before{
+    content:'';
+    width: 60px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    bottom: -20px;
+}
+
+.service img {
+    width: 30%;
+}
+
+/* impact start */
+.impact {
+    background-color: #F9FAFE;
+}
+
+.impact--cardlist {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+
+.impact--card {
+    border-radius: 20px;
+    padding: 20px;
+    transition: all .3s ease;
+    will-change: transform, box-shadow;
+}
+
+.impact--card img {
+    width: 30%;
+}
+
+.impact--card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* point start */
+.pointSection {
+    background-image: url(../images/pointbg.png);
+    background-size: cover;
+    background-position: center;
+    padding: 100px;
+    color: #fff;
+}
+
+
+
+.cta-btn {
+    padding: 5px 10px;
+    color: #fff;
+    font-weight: 500;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    display: inline-block;
+    background: rgba(255,255,255,0.4);
+}
+
+
+/* news start */
+.new--images img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.new--images {
+    overflow: hidden;
+}
+
+.news--content > div {
+  border-radius: 12px;
+  transition: border-radius .25s ease;
+}
+.news--content:hover > div {
+  border-radius: 24px;
+}
+
+.news-text {
+    border: 1px solid #eee;
+    padding: 0 20px;
+}
+
+.news-text p {
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    /* -ms-box-orient: vertical; */
+    /* -o-box-orient: vertical; */
+    /* webkit / ms / o : 호환성 때문에 써야함 */
+}
+
+/* qna start */
+
+.qnaSection {
+    background-image: url(../images/pointbg.png);
+    background-position: center;
+    background-size: cover;
+    padding: 100px;
+    color: #fff;
+} 
