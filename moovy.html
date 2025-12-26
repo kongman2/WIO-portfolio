@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOOVY | WIO</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/icon/oyster-logo.ico">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/project-detail.css">
+</head>
+<body class="project-detail-page">
+    <!-- Logo with dropdown menu -->
+    <div class="logo-container">
+      <div class="logo-wrapper" id="logo-toggle">
+        <a href="./index.html">
+          <img src="./assets/images/oyster-logo.png" alt="Logo" class="logo-image">
+        </a>
+        <span class="menu-label">click!</span>
+      </div>
+      <div class="logo-menu" id="logo-menu">
+        <a href="./index.html#introduction" class="menu-link">INTRODUCTION | 소개</a>
+        <a href="./index.html#about-me" class="menu-link">ABOUT ME | 디자이너 소개</a>
+        <a href="./index.html#branding" class="menu-link">BRANDING & VISUAL | 브랜딩·그래픽 작업</a>
+        <a href="./index.html#projects" class="menu-link">PROJECTS | 프로젝트</a>
+        <a href="./index.html#skills" class="menu-link">SKILLS | 역량 및 도구</a>
+        <a href="./index.html#contact" class="menu-link">CONTACT | 연락하기</a>
+      </div>
+    </div>
+
+    <!-- Project Detail Section -->
+    <section class="section fin-section projects project-detail-page">
+      <div class="container project-detail">
+        <div class="row">
+          <div class="col-12 mb-4">
+            <a href="./index.html#projects" class="cta-btn">← Back to Projects</a>
+          </div>
+        </div>
+
+        <!-- 프로젝트 개요 -->
+        <section class="kv-section">
+          <h2 class="line mb-5">MOOVY</h2>
+          <div class="row">
+            <div class="project--images img-zoom col-12 col-md-6">
+              <img src="./assets/images/moovy.gif" alt="moovy mainpage">
+            </div>
+            <div class="col-12 col-md-6">
+              <p><strong>넷플릭스 트렌드를 기반으로 대화와 반응이 빠르게 축적되는 참여형 영화 리뷰 플랫폼</strong></p>
+              <p>"기록 저장형 리뷰가 아닌, 트렌드 중심 커뮤니티 경험"</p>
+              <p class="deployment-note">정식 배포 미진행, 내부 테스트 환경<br>무료 배포 환경과 데이터 API 특성상 업데이트 주기는 제한적</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="row">
+            <div class="col-12">
+              <h4>핵심 MVP 전략</h4>
+              <blockquote>"참여-보상-혜택-피드백"이 돌아오는 ESG 루프 설계</blockquote>
+              <table>
+                <thead>
+                  <tr>
+                    <th>MVP 기능</th>
+                    <th>목적</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>사진 인증 기반 참여</td>
+                    <td>진입 장벽 최소화</td>
+                  </tr>
+                  <tr>
+                    <td>즉각 포인트 보상</td>
+                    <td>행동 강화</td>
+                  </tr>
+                  <tr>
+                    <td>기부/세제 혜택 연결</td>
+                    <td>실질적 가치 제공</td>
+                  </tr>
+                  <tr>
+                    <td>탄소 절감 리포트</td>
+                    <td>성취감 & 지속성</td>
+                  </tr>
+                  <tr>
+                    <td>지도 기반 활동 피드백</td>
+                    <td>참여의 실감형 경험</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p><strong>→ 단순 참여가 아닌, '돌아오고 싶게 만드는 구조'가 핵심</strong></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 사용자 플로우 & 주요 기능 -->
+        <section>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h4>사용자 플로우</h4>
+              <p>메인 → 영화 리스트/검색 → 영화 상세 → 리뷰/답글 → 마이페이지(캘린더)</p>
+            </div>
+            <div class="col-12 col-md-6">
+              <h4>주요 기능</h4>
+              <ul>
+                <li>넷플릭스 TOP 랭킹 데이터 자동 수집</li>
+                <li>신작/현재 상영작 TOP3 자동 노출</li>
+                <li>관리자 추천작 큐레이션 탭</li>
+                <li>기간제 토픽 + 댓글/답글/좋아요</li>
+                <li>마이페이지 기록 히스토리(캘린더 저장)</li>
+                <li>IntersectionObserver 기반 무한 스크롤</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 디자인 시스템 & UI 설계 -->
+        <section>
+          <h3>디자인 시스템 & UI 설계</h3>
+          <blockquote>"MOOVY는 패턴 중심 UI 시스템 설계가 핵심이었습니다."</blockquote>
+          <table>
+            <thead>
+              <tr>
+                <th>설계 요소</th>
+                <th>의도</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>컴포넌트 기반 화면 패턴 정의</td>
+                <td>구조적 UI 개발 협업</td>
+              </tr>
+              <tr>
+                <td>카드/리스트/모달 공통화</td>
+                <td>유지보수 & 디자인 일관성</td>
+              </tr>
+              <tr>
+                <td>타입 기반 시스템(기획 관점)</td>
+                <td>상태/선택/필터의 예측 가능성</td>
+              </tr>
+              <tr>
+                <td>검색/필터/페이지네이션</td>
+                <td>방대한 데이터 탐색 UX 개선</td>
+              </tr>
+              <tr>
+                <td>반응형 레이아웃 (Bootstrap 활용)</td>
+                <td>디바이스별 동일 경험</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><strong>이 프로젝트에서 "스타일 시스템 → 화면 설계 → 개발" 순서를 명확히 적용했습니다.</strong> PETHAUL/RE:EARTH에서 느낀 시행착오를 기반으로 성장한 부분이라고 생각합니다.</p>
+        </section>
+
+        <!-- 내 역할 & 기술 -->
+        <section>
+          <h3>내 역할 & 기술</h3>
+          <p><strong>UI/UX 설계 · 디자인 시스템 정의 · 퍼블리싱 일부 · MVP 구조 기획</strong></p>
+          <ul>
+            <li>검색 → 상세 → 리뷰 → 기록 흐름 구조화</li>
+            <li>컴포넌트 패턴 설계(카드/리스트/댓글/모달)</li>
+            <li>넷플릭스 TOP 랭킹 기반 MVP 플로우 기획</li>
+            <li>Figma 기반 화면 설계 및 퍼블리싱 일부</li>
+            <li>관리자 UI 필터/정렬 구조 기획</li>
+          </ul>
+          <div class="row mt-4">
+            <div class="col-12 col-md-6 mb-3">
+              <h4>Frontend</h4>
+              <div class="tech-stack">
+                <span>React</span>
+                <span>Redux Toolkit</span>
+                <span>Styled Components</span>
+                <span>SCSS</span>
+                <span>Bootstrap</span>
+                <span>Swiper</span>
+                <span>IntersectionObserver</span>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 mb-3">
+              <h4>Design</h4>
+              <div class="tech-stack">
+                <span>Figma</span>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 mb-3">
+              <h4>Collaboration</h4>
+              <div class="tech-stack">
+                <span>Notion</span>
+                <span>Slack</span>
+                <span>GitHub</span>
+                <span>FigJam</span>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 mb-3">
+              <h4>API / 기타</h4>
+              <div class="tech-stack">
+                <span>넷플릭스 크롤링 API</span>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <h4>Deployment</h4>
+              <div class="tech-stack">
+                <span>내부 테스트 환경</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 결과 & 배운 점 -->
+        <section>
+          <h3>결과 & 배운 점</h3>
+          <ul>
+            <li>분산된 영화 정보 탐색을 <strong>하나의 상세 경험으로 통합</strong></li>
+            <li>트렌드 기반 콘텐츠로 <strong>참여 전환률 향상 방향성 확인</strong></li>
+            <li>공통 UI 컴포넌트 설계로 <strong>디자인·개발 일관성 확보</strong></li>
+            <li>MVP 범위에서 <strong>반응이 쌓이는 커뮤니티 구조 검증</strong></li>
+          </ul>
+          <p class="mt-3">Figma의 <strong>Variant 구성 기준</strong>과 <strong>Design Token(Variable) 정의</strong> 부분에서는 실무적으로 요구되는 수준에 미치지 못한 점을 인지했고, 현재는 이를 보완하기 위해 <strong>컴포넌트 단위 설계 · 변수화 전략 · 라이브러리화 시나리오</strong>를 지속적으로 학습하고 있습니다.</p>
+        </section>
+
+        <!-- 프로젝트 정보 -->
+        <section>
+          <h3>프로젝트 정보</h3>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h4>문서 & 소스코드</h4>
+              <div class="link-section">
+                <div>
+                  <strong>기획문서:</strong>
+                  <a href="https://docs.google.com/spreadsheets/d/1fVLf9S0ek1GQZT2FZSBDlwB5tQZVOahA/edit?usp=drive_link&ouid=114751196610737489041&rtpof=true&sd=true" target="_blank">Google Sheets</a>
+                </div>
+                <div>
+                  <strong>디자인:</strong>
+                  <a href="https://www.figma.com/design/PcgSz1u6Yqqa2NE4bsMxXd/Project-1--Design?node-id=24-32&p=f&t=iF7vrlJ9V9CCKU36-0" target="_blank">Figma</a>
+                </div>
+                <div>
+                  <strong>유저플로우:</strong>
+                  <a href="https://www.figma.com/board/aV7Gvqfld9whdizqcnLRcn/Project-1--User-Flow?node-id=0-1&p=f&t=3qkPCAYKImhXsBiR-0" target="_blank">Figma Board</a>
+                </div>
+                <div>
+                  <strong>ERD:</strong>
+                  <a href="https://www.erdcloud.com/d/yHwjKCEAwT7Sw26ci" target="_blank">ERD Cloud</a>
+                </div>
+                <div>
+                  <strong>GitHub:</strong>
+                  <a href="https://github.com/SweetYun95/moovy-frontend.git" target="_blank">Frontend</a> · 
+                  <a href="https://github.com/SweetYun95/moovy-api.git" target="_blank">API</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <h4>TEAM</h4>
+              <ul>
+                <li><strong>팀장:</strong> 백엔드개발, AWS배포</li>
+                <li><strong>팀원1:</strong> 백엔드개발, ERD</li>
+                <li><strong>팀원2:</strong> 기획, 요구사항정의서, 퍼블리셔(기능구현)</li>
+                <li><strong>Me:</strong> 기획, 전체 UX/UI 디자인, 퍼블리셔(기능구현)</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <script src="./assets/js/jquery.slim.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

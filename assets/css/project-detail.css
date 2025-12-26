@@ -1,0 +1,217 @@
+/* Project Detail Page Styles */
+body.project-detail-page {
+  scroll-snap-type: none;
+  -webkit-scroll-snap-type: none;
+  overflow-y: auto;
+  background: var(--pearl-gradient);
+  background-size: var(--pearl-gradient-size);
+  background-position: var(--pearl-gradient-position);
+  background-attachment: fixed;
+}
+
+.project-detail-page .fin-section {
+  height: auto;
+  min-height: 100vh;
+  max-height: none;
+  overflow: visible;
+  padding: var(--spacing-xl) var(--spacing-large);
+  background: transparent;
+}
+
+.project-detail-page .projects {
+  background: transparent;
+}
+
+.project-detail-page .section {
+  scroll-snap-align: none;
+  -webkit-scroll-snap-align: none;
+}
+
+.project-detail {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.project-detail section {
+  margin-bottom: 5rem;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-large);
+  backdrop-filter: blur(10px);
+}
+
+.project-detail h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  margin-top: 0;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.project-detail h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  margin-top: 1.25rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+}
+
+.project-detail blockquote {
+  border-left: 2px solid var(--text-secondary);
+  padding: 0 1.5rem;
+  margin: 1.5rem 0;
+  font-style: normal;
+  background: transparent;
+  border-radius: 0;
+  font-size: var(--font-size-regular);
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.project-detail table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+}
+
+.project-detail table th,
+.project-detail table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.project-detail table th {
+  background: rgba(230, 240, 255, 0.7);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+}
+
+.project-detail table tr:last-child td {
+  border-bottom: none;
+}
+
+.project-detail ul {
+  list-style: none;
+  margin: 1.25rem 0;
+  padding: 0;
+}
+
+.project-detail ul li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 2;
+  font-size: var(--font-size-regular);
+  color: var(--text-secondary);
+}
+
+.project-detail ul li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-bold);
+}
+
+.project-detail .link-section {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.project-detail .link-section > div {
+  flex: 1;
+  min-width: 200px;
+}
+
+.project-detail .link-section a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-medium);
+  transition: all var(--transition-fast);
+  background: var(--pearl-white);
+}
+
+.project-detail .link-section a:hover {
+  background: var(--pearl-sky);
+  border-color: var(--pearl-sky);
+  transform: translateY(-2px);
+}
+
+.project-detail .deployment-note {
+  font-size: var(--font-size-small);
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-top: 0.5rem;
+  opacity: 0.7;
+}
+
+.project-detail p {
+  line-height: 2;
+  margin-bottom: 1.5rem;
+  font-size: var(--font-size-regular);
+  color: var(--text-secondary);
+}
+
+.project-detail strong {
+  color: var(--text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.project-detail .kv-section {
+  margin-bottom: 0;
+  background: transparent;
+  backdrop-filter: none;
+}
+
+.project-detail .kv-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.project-detail .kv-section p {
+  margin-bottom: 1rem;
+}
+
+.project-detail .tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.project-detail .tech-stack span {
+  padding: 0.4rem 0.8rem;
+  background: var(--pearl-sky);
+  border-radius: var(--radius-medium);
+  font-size: var(--font-size-small);
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .project-detail section {
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .project-detail-page .fin-section {
+    padding: var(--spacing-xl-mobile) var(--spacing-large);
+  }
+  .project-detail h3 {
+    font-size: 1.3rem;
+  }
+  .project-detail h4 {
+    font-size: 1.1rem;
+  }
+}
+
