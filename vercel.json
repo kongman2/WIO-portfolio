@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "installCommand": "git lfs install && git lfs pull",
   "builds": [
     {
       "src": "**",
