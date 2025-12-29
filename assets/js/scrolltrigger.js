@@ -141,10 +141,11 @@
   
   // Simplified snap with velocity check (disabled on mobile)
   let lastSnapValue = 0;
-  let snapThreshold = 0.35; // Minimum scroll distance to trigger snap (35% of section) - increased for longer stay
+  let snapThreshold = 0.5; // Minimum scroll distance to trigger snap (50% of section) - increased for longer stay
   let scrollAccumulator = 0; // Track accumulated scroll distance
   let lastScrollPosition = 0;
   let scrollStopTimeout = null;
+  let lastSectionChangeTime = Date.now(); // Track when last section change occurred
   
   function initSnap() {
     if (pageScrollTrigger) {
@@ -172,9 +173,15 @@
             scrollAccumulator += scrollDelta;
             lastScrollPosition = value;
             
-            // Only snap if accumulated enough scroll distance
+            // Only snap if accumulated enough scroll distance (require more scroll to move to next panel)
             if (scrollAccumulator < snapThreshold) {
-              return value; // Don't snap - stay in current section
+              return value; // Don't snap - stay in current section longer
+            }
+            
+            // Additional check: require minimum time spent in current section
+            const timeInSection = Date.now() - (lastSectionChangeTime || Date.now());
+            if (timeInSection < 500) { // Wait at least 500ms before allowing snap
+              return value;
             }
             
             // Calculate snapped value
@@ -185,6 +192,7 @@
               // Reset accumulator when snapping to new section
               scrollAccumulator = 0;
               lastSnapValue = snappedValue;
+              lastSectionChangeTime = Date.now(); // Update section change time
               return snappedValue;
             }
             
@@ -192,8 +200,8 @@
             scrollAccumulator = 0;
             return value;
           },
-          duration: { min: 0.8, max: 1.5 }, // Longer duration for smoother transition
-          delay: 0.8, // Longer delay - wait much longer before snapping
+          duration: { min: 1.0, max: 2.0 }, // Longer duration for smoother transition
+          delay: 1.2, // Longer delay - wait much longer before snapping to next panel
           inertia: true,
           ease: "power2.inOut"
         }
