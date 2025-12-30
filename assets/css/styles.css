@@ -250,7 +250,6 @@ img {
 /* CTA Button 공통 스타일 */
 .cta-btn {
   display: inline-block;
-  width: fit-content;
   padding: 3px 6px;
   color: var(--text-primary);
   font-weight: var(--font-weight-medium);
@@ -616,9 +615,9 @@ img {
   margin-top: var(--spacing-small);
 }
 
-/* Swiper Customization for Branding Section */
+/* Swiper Customization */
 .branding-swiper {
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 
 .branding-swiper .swiper-slide {
@@ -628,6 +627,15 @@ img {
 .branding-swiper .swiper-button-next,
 .branding-swiper .swiper-button-prev {
   display: none;
+}
+
+.branding-swiper .swiper-pagination {
+  position: relative;
+  margin-top: 2rem;
+  bottom: auto;
+  left: auto;
+  width: 100%;
+  text-align: center;
 }
 
 .branding-swiper .swiper-pagination-bullet {
