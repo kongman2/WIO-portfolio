@@ -263,7 +263,7 @@ img {
 }
 
 .cta-btn:hover {
-  background: var(--pearl-sky);
+  background: var(--pearl-white);
   border-color: var(--text-primary);
   color: var(--text-primary);
   text-decoration: none;
@@ -626,7 +626,36 @@ img {
 
 .branding-swiper .swiper-button-next,
 .branding-swiper .swiper-button-prev {
-  display: none;
+  color: var(--text-primary);
+  width: 28px;
+  height: 28px;
+  margin-top: 0;
+  top: 35%;
+  transform: translateY(-50%);
+  background: transparent;
+  border-radius: 50%;
+  opacity: 1;
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.branding-swiper .swiper-button-next:hover,
+.branding-swiper .swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateY(-50%) scale(1.2);
+}
+
+.branding-swiper .swiper-button-next::after,
+.branding-swiper .swiper-button-prev::after {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.branding-swiper .swiper-button-next {
+  right: 10px;
+}
+
+.branding-swiper .swiper-button-prev {
+  left: 10px;
 }
 
 .branding-swiper .swiper-pagination {
@@ -716,6 +745,7 @@ img {
   height: 100%;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 .projects--content > div {

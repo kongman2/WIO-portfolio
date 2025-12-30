@@ -141,7 +141,7 @@
   
   // Simplified snap with velocity check (disabled on mobile)
   let lastSnapValue = 0;
-  let snapThreshold = 0.5; // Minimum scroll distance to trigger snap (50% of section) - increased for longer stay
+  let snapThreshold = 0.7; // Minimum scroll distance to trigger snap (70% of section) - increased for longer stay
   let scrollAccumulator = 0; // Track accumulated scroll distance
   let lastScrollPosition = 0;
   let scrollStopTimeout = null;
@@ -180,7 +180,7 @@
             
             // Additional check: require minimum time spent in current section
             const timeInSection = Date.now() - (lastSectionChangeTime || Date.now());
-            if (timeInSection < 500) { // Wait at least 500ms before allowing snap
+            if (timeInSection < 1000) { // Wait at least 1000ms (1 second) before allowing snap
               return value;
             }
             
@@ -200,8 +200,8 @@
             scrollAccumulator = 0;
             return value;
           },
-          duration: { min: 1.0, max: 2.0 }, // Longer duration for smoother transition
-          delay: 1.2, // Longer delay - wait much longer before snapping to next panel
+          duration: { min: 1.2, max: 2.5 }, // Longer duration for smoother transition
+          delay: 1.5, // Longer delay - wait much longer before snapping to next panel
           inertia: true,
           ease: "power2.inOut"
         }
