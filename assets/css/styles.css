@@ -211,6 +211,25 @@ img {
   padding: var(--spacing-xl);
 }
 
+.fin-section.branding {
+  height: auto;
+  max-height: none;
+  overflow: visible;
+}
+
+.fin-section.branding > div {
+  width: 100%;
+  height: 100%;
+}
+
+.fin-section.branding .container {
+  height: 100%;
+}
+
+.fin-section.branding .row {
+  height: 100%;
+}
+
 @media (max-width: 768px) {
   .fin-section {
     height: fit-content;
@@ -218,13 +237,6 @@ img {
     max-height: none;
     overflow: visible;
     padding: var(--spacing-xl-mobile);
-  }
-  
-  /* Branding and Projects sections padding adjustment */
-  .fin-section.branding,
-  .fin-section.projects {
-    padding: 2rem 1rem;
-    min-height: auto;
   }
 }
 
@@ -405,6 +417,12 @@ img {
   transform: translateY(0);
 }
 
+.logo-menu.menu-closed {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+}
+
 .logo-menu .menu-link {
   text-decoration: none;
   font-size: var(--font-size-small);
@@ -479,6 +497,15 @@ img {
 
 .hero img {
   width: 60%;
+  height: auto;
+  object-fit: contain;
+  aspect-ratio: auto;
+}
+
+@media (max-width: 768px) {
+  .hero img {
+    width: 80%;
+  }
 }
 
 .hero h1 {
@@ -499,11 +526,11 @@ img {
 }
 
 .about-me--img {
-  width: 60%;
-  max-width: 300px;
+  width: 100%;
+  max-width: 250px;
   height: auto;
   display: block;
-  margin: 2rem auto 0;
+  margin: 0 auto;
   border-radius: var(--radius-medium);
 }
 
@@ -792,6 +819,46 @@ img {
 .skills--card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+  .skills--card {
+    padding: 12px;
+  }
+  
+  .skills--card h4 {
+    font-size: 0.9rem;
+    margin-top: 0.75rem;
+  }
+  
+  .skills--card p {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+  }
+  
+  .skills--card img {
+    width: 25%;
+  }
+}
+
+@media (max-width: 576px) {
+  .skills--card {
+    padding: 10px;
+  }
+  
+  .skills--card h4 {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+  }
+  
+  .skills--card p {
+    font-size: 0.7rem;
+    margin-top: 0.4rem;
+  }
+  
+  .skills--card img {
+    width: 20%;
+  }
 }
 
 /* Contact */
